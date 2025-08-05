@@ -1,12 +1,12 @@
-const CACHE_NAME = 'jstream-v2';
-const STATIC_CACHE = 'jstream-static-v2';
-const DYNAMIC_CACHE = 'jstream-dynamic-v2';
+const CACHE_NAME = 'jstream-v3';
+const STATIC_CACHE = 'jstream-static-v3';
+const DYNAMIC_CACHE = 'jstream-dynamic-v3';
 
 // Assets to cache immediately
 const urlsToCache = [
   '/',
   '/manifest.json',
-  '/images/logo.png',
+  '/images/logo.png?v=3',
   '/images/hero.jpg',
   '/images/grey-thumbnail.jpg',
   '/images/no-image.png',
@@ -168,25 +168,25 @@ function doBackgroundSync() {
 self.addEventListener('push', event => {
   const options = {
     body: event.data ? event.data.text() : 'New content available!',
-    icon: '/images/logo.png',
-    badge: '/images/logo.png',
+    icon: '/images/logo.png?v=3',
+    badge: '/images/logo.png?v=3',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
       primaryKey: 1
     },
-    actions: [
-      {
-        action: 'explore',
-        title: 'Explore',
-        icon: '/images/logo.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/images/logo.png'
-      }
-    ]
+           actions: [
+         {
+           action: 'explore',
+           title: 'Explore',
+           icon: '/images/logo.png?v=3'
+         },
+         {
+           action: 'close',
+           title: 'Close',
+           icon: '/images/logo.png?v=3'
+         }
+       ]
   };
 
   event.waitUntil(
