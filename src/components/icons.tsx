@@ -29,6 +29,7 @@ import {
   Palette,
   Database,
   Zap,
+  Download,
 } from "lucide-react";
 
 type IconProps = LucideProps;
@@ -58,6 +59,7 @@ export const Icons = {
   palette: Palette,
   database: Database,
   zap: Zap,
+  download: Download,
   // logo: (props: IconProps) => (
   //   <svg
   //     xmlns="http://www.w3.org/2000/svg"

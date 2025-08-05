@@ -1,6 +1,7 @@
 import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { ThemeProvider } from '@/components/theme-provider';
 import { AuthGuard } from '@/components/auth/auth-guard';
+import { PWAInstaller, registerServiceWorker } from '@/components/pwa-installer';
 import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
 // import { TrpcProvider } from '@/client/trpc-provider';
@@ -26,9 +27,13 @@ const fontHeading = localFont({
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: '#0a84ff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a84ff' },
   ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export const metadata: Metadata = {
@@ -64,8 +69,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/favicon.ico',
+    apple: '/images/logo.png',
   },
-  other: { referrer: 'no-referrer-when-downgrade' },
+  manifest: '/manifest.json',
+  other: { 
+    referrer: 'no-referrer-when-downgrade',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'apple-mobile-web-app-title': 'Jstream',
+    'mobile-web-app-capable': 'yes',
+  },
 };
 
 export default function RootLayout({
@@ -75,6 +88,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                      console.log('✅ Service Worker registered successfully:', registration);
+                    })
+                    .catch(function(error) {
+                      console.error('❌ Service Worker registration failed:', error);
+                    });
+                });
+              }
+            `,
+          }}
+        />
+      </head>
       <body
         className={cn(
           'overflow-y-auto min-h-screen overflow-x-hidden bg-background font-sans antialiased',
@@ -91,6 +123,7 @@ export default function RootLayout({
           <AuthGuard>
             {children}
           </AuthGuard>
+          <PWAInstaller />
           <TailwindIndicator />
           {/* </TrpcProvider> */}
         </ThemeProvider>

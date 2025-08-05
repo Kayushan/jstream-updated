@@ -1,0 +1,35 @@
+{
+  "name": "Jstream - Streaming Platform Built with Love",
+  "short_name": "Jstream",
+  "description": "A modern streaming platform built by Shan for his girlfriend Jessy, featuring movies, TV shows, and anime content.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#0a84ff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["entertainment", "streaming", "movies", "tv"],
+  "icons": [
+    {
+      "src": "/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/hero.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
+} 
