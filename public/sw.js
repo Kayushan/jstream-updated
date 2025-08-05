@@ -1,14 +1,12 @@
-const CACHE_NAME = 'jstream-v1';
-const STATIC_CACHE = 'jstream-static-v1';
-const DYNAMIC_CACHE = 'jstream-dynamic-v1';
+const CACHE_NAME = 'jstream-v2';
+const STATIC_CACHE = 'jstream-static-v2';
+const DYNAMIC_CACHE = 'jstream-dynamic-v2';
 
 // Assets to cache immediately
 const urlsToCache = [
   '/',
   '/manifest.json',
   '/images/logo.png',
-  '/images/icon-192x192.png',
-  '/images/icon-512x512.png',
   '/images/hero.jpg',
   '/images/grey-thumbnail.jpg',
   '/images/no-image.png',
