@@ -18,16 +18,16 @@ const config = {
     defaultLocale: 'en',
   },
   images: {
-    unoptimized: !env.NEXT_PUBLIC_IMAGE_DOMAIN,
+    unoptimized: true,
     domains: [env.NEXT_PUBLIC_IMAGE_DOMAIN ?? 'image.tmdb.org'],
     imageSizes: [48, 64, 96],
     deviceSizes: [128, 256, 512, 1200],
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   swcMinify: true,
 };

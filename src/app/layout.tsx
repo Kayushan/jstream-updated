@@ -10,7 +10,7 @@ import localFont from 'next/font/local';
 import { siteConfig } from '@/configs/site';
 import { env } from '@/env.mjs';
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 const fontSans = FontSans({
   subsets: ['latin'],

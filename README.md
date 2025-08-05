@@ -1,67 +1,64 @@
-# Jstream - Premium Streaming Platform
+# Jstream - Streaming Platform Built with Love 💕
 
-A modern, responsive streaming platform for movies and TV shows.
+A modern streaming platform built by Shan for his girlfriend Jessy, featuring movies, TV shows, and anime content.
 
-## Features
+## 🚀 Quick Deploy
 
-- **Browse Movies**: Explore a vast collection of movies sorted by genre, release date, or popularity.
-- **Search Functionality**: Easily find movies by title, director, or cast.
-- **User Reviews**: Read and write reviews to share your thoughts and opinions about movies.
-- **User Ratings**: Rate movies and see the average ratings provided by the community.
-- **Recommendation Engine**: Get personalized movie recommendations based on your preferences and viewing history.
-- **Responsive Design**: Enjoy a seamless experience across devices with our responsive web design.
+### Deploy to Netlify
 
-## Deployments
-### Deploy with Vercel
-1. Click the button below to deploy the project on Vercel.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/jstream)
 
-- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbitfreee%2Fjstream&env=NEXT_PUBLIC_APP_URL,NEXT_PUBLIC_TMDB_TOKEN,NEXT_PUBLIC_SITE_NAME) 
-2. Fill in the required environment variables:
-- `NEXT_PUBLIC_APP_URL`: The URL of your deployed project (e.g., `https://jstream.vercel.app`)
-- `NEXT_PUBLIC_TMDB_TOKEN`: Your TMDb API key (get it [here](https://www.themoviedb.org/documentation/api), or you can use default token in .env.example file for testing)
-- `NEXT_PUBLIC_SITE_NAME`: The name of your website (e.g., `Jstream`)
+### Deploy to Vercel
 
-3. Click "Deploy" and wait for the deployment to complete.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbitfreee%2Fjstream&env=NEXT_PUBLIC_APP_URL,NEXT_PUBLIC_TMDB_TOKEN,NEXT_PUBLIC_SITE_NAME)
 
-### Deploy with Cloudflare Pages
-To deploy on [Cloudflare Pages](https://pages.cloudflare.com/) you can use the following instructions:
-[README](https://github.com/cloudflare/next-on-pages/tree/main/packages/next-on-pages)
+## 🛠️ Environment Variables
 
-## Local Development
+Set up the following environment variables:
+
+- `NEXT_PUBLIC_APP_URL`: The URL of your deployed project (e.g., `https://jstream.netlify.app`)
+- `NEXT_PUBLIC_TMDB_TOKEN`: Your TMDB API token
+- `NEXT_PUBLIC_SITE_NAME`: Your site name (e.g., `Jstream`)
+
+## 📦 Installation
 
 1. Clone the repository: `git clone https://github.com/bitfreee/jstream`
 2. Navigate to the project directory: `cd jstream`
 3. Install dependencies: `npm install`
-4. Create .env file `cp .env.example .env`
-4. Start the development server: `npm run dev`
+4. Set up environment variables (see above)
+5. Run the development server: `npm run dev`
 
-## Tech Stack
+## 🎯 Features
 
-- [Next.js](https://nextjs.org/) – framework
-- [TypeScript](https://www.typescriptlang.org/) – language
-- [Tailwind](https://tailwindcss.com/) – CSS
-- [Vercel](https://vercel.com/) – deployments
-- [TMDb](https://www.themoviedb.org/) - movie database
-- [Vidsrc.cc](https://vidsrc.cc) - streaming links
+- 🎬 **Movies & TV Shows**: Browse and watch the latest content
+- 🍿 **Anime Section**: Dedicated anime streaming
+- 💕 **Built with Love**: Created by Shan for his girlfriend Jessy
+- 🌙 **Dark/Light Mode**: Beautiful theme switching
+- 📱 **Responsive Design**: Works on all devices
+- ⚡ **Fast Performance**: Optimized for speed
 
-## Contributing
+## 🚀 Deployment
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+### Netlify Deployment
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/improvement`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature/improvement`).
-6. Create a new Pull Request.
+1. Connect your GitHub repository to Netlify
+2. Set the build command: `npm run build`
+3. Set the publish directory: `.next`
+4. Add environment variables in Netlify dashboard
+5. Deploy!
 
-## License
+### Manual Build
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+```bash
+npm run build
+npm start
+```
 
-## Acknowledgements
+## 💝 The Love Story
 
-- The Movie Database (TMDb) for providing the movie data through their API.
-- [Vidsrc.cc](https://vidsrc.cc) for providing the movie streaming links.
+This streaming platform was built by Shan as a special gift for his girlfriend Jessy. It's designed to provide the perfect movie-watching experience for their cozy nights together. Every feature, every design choice, and every optimization was made with love and care.
+
 ---
+
+Made with ❤️ by Shan for Jessy
 
