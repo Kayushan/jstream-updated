@@ -9,13 +9,13 @@ import { env } from '@/env.mjs';
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'Jstream',
-  author: 'Jstream',
-  slogan: 'Stream Your World, Anywhere, Anytime.',
+  name: env.NEXT_PUBLIC_SITE_NAME,
+  author: env.NEXT_PUBLIC_SITE_NAME,
+  slogan: 'Stream Movies & TV Shows Online with Jstream.',
   description:
-    'Jstream - Your premium streaming destination. Watch movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.',
+    'Jstream - Your ultimate streaming platform. Watch movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.',
   keywords: [
-    'Jstream',
+    'jstream',
     'streaming platform',
     'watch movies',
     'movies online',
@@ -31,14 +31,13 @@ export const siteConfig = {
     'watch TV online',
     'no download',
     'full length movies',
-    'premium streaming',
-    'stream anywhere',
+    env.NEXT_PUBLIC_SITE_NAME,
   ],
   url: env.NEXT_PUBLIC_APP_URL,
   ogImage: `${env.NEXT_PUBLIC_APP_URL}/images/hero.jpg`,
   links: {
     twitter: `${env.NEXT_PUBLIC_TWITTER}`,
-    github: 'https://github.com/your-username/jstream',
+    github: 'https://github.com/bitfreee/jstream',
     githubAccount: '',
   },
   socialLinks: [
@@ -63,7 +62,20 @@ export const siteConfig = {
       icon: Icons.youtube,
     },
   ],
-  footerItems: [],
+  footerItems: [
+    { title: 'Audio Description', href: '/' },
+    { title: 'Help Center', href: '/' },
+    { title: 'Gift Cards', href: '/' },
+    { title: 'Media Center', href: '/' },
+    { title: 'Investor Relations', href: '/' },
+    { title: 'Jobs', href: '/' },
+    { title: 'Terms of Use', href: '/terms-of-use' },
+    { title: 'Privacy', href: '/' },
+    { title: 'Legal Notices', href: '/' },
+    { title: 'Cookie Preferences', href: '/' },
+    { title: 'Corporate Information', href: '/' },
+    { title: 'Contact Us', href: '/' },
+  ],
   mainNav: [
     {
       title: 'Home',

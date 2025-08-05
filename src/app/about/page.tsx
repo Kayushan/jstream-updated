@@ -4,6 +4,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Icons } from '@/components/icons';
 import { siteConfig } from '@/configs/site';
 import { useRouter } from 'next/navigation';
@@ -16,7 +17,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
+    <div className="container mx-auto px-4 py-8 max-w-6xl">
       {/* Back Button */}
       <div className="mb-6">
         <Button
@@ -28,121 +29,250 @@ export default function AboutPage() {
           Back
         </Button>
       </div>
-      <div className="space-y-8">
-        {/* Header */}
-        <div className="text-center space-y-4">
-          <div className="flex items-center justify-center space-x-2 mb-6">
-            <Icons.logo className="h-12 w-12" />
-            <h1 className="text-4xl font-bold">{siteConfig.name}</h1>
+
+      <div className="space-y-12">
+        {/* Hero Section */}
+        <div className="text-center space-y-6">
+          <div className="flex items-center justify-center space-x-3 mb-8">
+            <Icons.logo className="h-16 w-16" />
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              {siteConfig.name}
+            </h1>
           </div>
-          <p className="text-xl text-muted-foreground">{siteConfig.slogan}</p>
+          <p className="text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            A streaming platform built with love by Shan for his girlfriend Jessy
+          </p>
+          <div className="flex justify-center">
+            <Badge variant="secondary" className="text-lg px-4 py-2">
+              💕 Made with Love 💕
+            </Badge>
+          </div>
         </div>
+
+        {/* Love Story Section */}
+        <Card className="border-2 border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 dark:border-pink-800 dark:from-pink-950 dark:to-purple-950">
+          <CardHeader className="text-center">
+            <CardTitle className="text-3xl text-pink-700 dark:text-pink-300">
+              The Story Behind Jstream
+            </CardTitle>
+            <CardDescription className="text-lg">
+              A tale of love, technology, and endless movie nights
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6 text-center">
+            <div className="max-w-4xl mx-auto space-y-4">
+              <p className="text-lg leading-relaxed">
+                <strong>Jstream</strong> was born from a simple yet beautiful idea - to create the perfect streaming platform 
+                for movie nights with the one you love. Shan, a passionate developer, wanted to build something special 
+                for his girlfriend Jessy, who loves watching movies and TV shows together.
+              </p>
+              <p className="text-lg leading-relaxed">
+                What started as a personal project to make their movie nights more enjoyable has grown into a 
+                comprehensive streaming platform that brings people together through the magic of cinema. 
+                Every feature, every design choice, and every line of code was crafted with Jessy in mind.
+              </p>
+              <div className="flex items-center justify-center space-x-4 mt-6">
+                <Icons.heart className="h-8 w-8 text-pink-500" />
+                <span className="text-xl font-semibold text-pink-700 dark:text-pink-300">
+                  Built with love by Shan for Jessy
+                </span>
+                <Icons.heart className="h-8 w-8 text-pink-500" />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Products & Features */}
+        <div className="space-y-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-4">Our Products & Features</h2>
+            <p className="text-xl text-muted-foreground">
+              Discover what makes Jstream the perfect streaming companion
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {/* Movies */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <Icons.movie className="h-8 w-8 text-blue-500" />
+                  <CardTitle>Movies</CardTitle>
+                </div>
+                <CardDescription>
+                  Extensive collection of movies from all genres
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Latest releases and classics</li>
+                  <li>• Multiple genres and categories</li>
+                  <li>• High-quality streaming</li>
+                  <li>• Detailed movie information</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* TV Shows */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <Icons.tvShow className="h-8 w-8 text-green-500" />
+                  <CardTitle>TV Shows</CardTitle>
+                </div>
+                <CardDescription>
+                  Binge-worthy TV series and episodes
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Complete seasons and episodes</li>
+                  <li>• Popular and trending shows</li>
+                  <li>• Episode guides and ratings</li>
+                  <li>• Seamless episode navigation</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Anime */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <Icons.list className="h-8 w-8 text-purple-500" />
+                  <CardTitle>Anime</CardTitle>
+                </div>
+                <CardDescription>
+                  Japanese animation and manga adaptations
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Popular anime series</li>
+                  <li>• Subbed and dubbed versions</li>
+                  <li>• Seasonal releases</li>
+                  <li>• Anime-specific features</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Search & Discovery */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <Icons.search className="h-8 w-8 text-orange-500" />
+                  <CardTitle>Smart Search</CardTitle>
+                </div>
+                <CardDescription>
+                  Find exactly what you're looking for
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Advanced search filters</li>
+                  <li>• Genre-based recommendations</li>
+                  <li>• Trending content discovery</li>
+                  <li>• Personalized suggestions</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Mobile Experience */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <Icons.smartphone className="h-8 w-8 text-indigo-500" />
+                  <CardTitle>Mobile Optimized</CardTitle>
+                </div>
+                <CardDescription>
+                  Perfect viewing on any device
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Responsive design</li>
+                  <li>• Touch-friendly interface</li>
+                  <li>• Cross-platform compatibility</li>
+                  <li>• Offline viewing options</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* User Experience */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <Icons.user className="h-8 w-8 text-teal-500" />
+                  <CardTitle>User Experience</CardTitle>
+                </div>
+                <CardDescription>
+                  Designed for the best viewing experience
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Intuitive navigation</li>
+                  <li>• Dark/light theme support</li>
+                  <li>• Fast loading times</li>
+                  <li>• Minimal ads and distractions</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Technology Stack */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl">Built with Modern Technology</CardTitle>
+            <CardDescription>
+              Cutting-edge tech stack for the best performance
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              <div className="text-center p-4 border rounded-lg">
+                <Icons.code className="h-8 w-8 mx-auto mb-2 text-blue-500" />
+                <h4 className="font-semibold">Next.js</h4>
+                <p className="text-sm text-muted-foreground">React Framework</p>
+              </div>
+              <div className="text-center p-4 border rounded-lg">
+                <Icons.palette className="h-8 w-8 mx-auto mb-2 text-green-500" />
+                <h4 className="font-semibold">Tailwind CSS</h4>
+                <p className="text-sm text-muted-foreground">Styling Framework</p>
+              </div>
+              <div className="text-center p-4 border rounded-lg">
+                <Icons.database className="h-8 w-8 mx-auto mb-2 text-purple-500" />
+                <h4 className="font-semibold">TMDb API</h4>
+                <p className="text-sm text-muted-foreground">Movie Database</p>
+              </div>
+              <div className="text-center p-4 border rounded-lg">
+                <Icons.zap className="h-8 w-8 mx-auto mb-2 text-orange-500" />
+                <h4 className="font-semibold">Vidsrc</h4>
+                <p className="text-sm text-muted-foreground">Streaming Service</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Legal Disclaimer */}
         <Alert className="border-orange-200 bg-orange-50 dark:border-orange-800 dark:bg-orange-950">
           <Icons.alertTriangle className="h-4 w-4 text-orange-600" />
           <AlertDescription className="text-orange-800 dark:text-orange-200">
-            <strong>Important Legal Notice:</strong> {siteConfig.name} does not host, store, or distribute any copyrighted content on our servers.
+            <strong>Legal Notice:</strong> Jstream is a content discovery and aggregation platform. We do not host, store, or distribute any copyrighted content on our servers. All content is provided by third-party streaming services.
           </AlertDescription>
         </Alert>
 
-        {/* About Content */}
-        <Card>
-          <CardHeader>
-            <CardTitle>About {siteConfig.name}</CardTitle>
-            <CardDescription>
-              Your premium streaming platform for discovering and watching movies and TV shows
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold mb-3">What We Do</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {siteConfig.name} is a content discovery and aggregation platform that helps users find and access 
-                movies and TV shows from various third-party streaming providers. We provide a unified interface 
-                for browsing, searching, and discovering entertainment content across multiple sources.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-3">Content Sources</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                All streaming content available through {siteConfig.name} is provided by third-party streaming 
-                services and content providers. We embed links and content from these external sources, but we 
-                do not host, store, or distribute any copyrighted material on our own servers.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-3">Legal Compliance</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We are committed to operating within legal boundaries and respecting intellectual property rights. 
-                Our platform serves as a discovery tool and aggregator, similar to search engines, by providing 
-                links to content hosted elsewhere on the internet.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-3">DMCA Compliance</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                If you are a copyright holder and believe that content linked through our platform infringes 
-                your rights, please contact us with proper documentation. We will promptly review and remove 
-                any links that violate copyright laws.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-3">User Responsibility</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Users are responsible for ensuring they have the legal right to access content through 
-                third-party providers. We encourage users to use legitimate streaming services and 
-                respect copyright laws in their jurisdiction.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-3">Our Mission</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Our mission is to provide a seamless, user-friendly platform for discovering entertainment 
-                content while maintaining transparency about our role as a content aggregator and discovery tool.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Contact Information */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Contact & Support</CardTitle>
-            <CardDescription>
-              Get in touch with us for questions, support, or legal matters
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-4 md:grid-cols-2">
-              <div>
-                <h4 className="font-semibold mb-2">General Inquiries</h4>
-                <p className="text-sm text-muted-foreground">
-                  For general questions about our platform and services.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2">Legal Matters</h4>
-                <p className="text-sm text-muted-foreground">
-                  For copyright concerns, DMCA requests, or legal inquiries.
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Footer Note */}
-        <div className="text-center text-sm text-muted-foreground">
-          <p>
-            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-          </p>
-          <p className="mt-2">
-            This platform is designed for content discovery and aggregation purposes only.
+        {/* Footer */}
+        <div className="text-center space-y-4">
+          <div className="flex items-center justify-center space-x-2">
+            <Icons.heart className="h-5 w-5 text-pink-500" />
+            <p className="text-lg font-semibold">
+              Made with love by Shan for Jessy
+            </p>
+            <Icons.heart className="h-5 w-5 text-pink-500" />
+          </div>
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Jstream. All rights reserved.
           </p>
         </div>
       </div>

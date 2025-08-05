@@ -1,12 +1,12 @@
 # Supabase Authentication Setup Guide
 
-This guide will help you set up Supabase authentication for the MovieWeb Kickstart streaming platform.
+This guide will help you set up Supabase authentication for the Jstream streaming platform.
 
 ## Prerequisites
 
 1. A Supabase account and project
 2. Node.js and npm installed
-3. The MovieWeb Kickstart project cloned
+3. The Jstream project cloned
 
 ## Step 1: Create a Supabase Project
 
@@ -21,7 +21,7 @@ Create a `.env.local` file in the root directory with the following variables:
 ```env
 # App Configuration
 NEXT_PUBLIC_APP_URL=http://localhost:3000
-NEXT_PUBLIC_SITE_NAME="MovieWeb Kickstart"
+NEXT_PUBLIC_SITE_NAME="Jstream"
 
 # TMDb API Configuration
 NEXT_PUBLIC_TMDB_TOKEN=your_tmdb_api_token_here

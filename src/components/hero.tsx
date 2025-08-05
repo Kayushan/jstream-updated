@@ -88,20 +88,22 @@ const Hero = ({ randomShow }: HeroProps) => {
               priority
             />
             <div className="absolute bottom-0 left-0 right-0 top-0">
-              <div className="absolute bottom-[28%] sm:bottom-[32%] md:bottom-[35%] left-[4%] top-0 z-10 flex w-[36%] flex-col justify-end space-y-2">
-                <h1 className="text-[4.5vw] sm:text-[3.5vw] md:text-[3vw] font-bold leading-tight">
+              <div className="absolute bottom-[35%] left-[4%] top-0 z-10 flex w-[36%] flex-col justify-end space-y-2">
+                <h1 className="text-[4.5vw] font-bold sm:text-[3vw]">
                   {randomShow?.title ?? randomShow?.name}
                 </h1>
-                <div className="flex space-x-2 text-[3vw] sm:text-[2.5vw] md:text-[1.2vw] font-semibold">
+                <div className="flex space-x-2 text-[3vw] font-semibold md:text-[1.2vw]">
                   <p className="text-green-600">
                     {Math.round(randomShow?.vote_average * 10) ?? '-'}% Match
                   </p>
+                  {/* <p className="text-gray-300">{randomShow?.release_date ?? "-"}</p> */}
+                  <p className="hidden md:block">{randomShow?.release_date ?? '-'}</p>
                 </div>
                 {/* <p className="line-clamp-4 text-sm text-gray-300 md:text-base"> */}
                 <p className="hidden text-[1.2vw] sm:line-clamp-3">
                   {randomShow?.overview ?? '-'}
                 </p>
-                <div className="mt-[3vw] sm:mt-[2vw] md:mt-[1.5vw] flex items-center space-x-2">
+                <div className="mt-[4.5vw] flex items-center space-x-2">
                   <Link prefetch={false} href={handleHref()}>
                     <Button
                       aria-label="Play video"

@@ -19,6 +19,16 @@ import {
   AlertTriangle,
   Construction,
   Shield,
+  Heart,
+  Film,
+  Tv,
+  List,
+  Smartphone,
+  User,
+  Code,
+  Palette,
+  Database,
+  Zap,
 } from "lucide-react";
 
 type IconProps = LucideProps;
@@ -38,6 +48,16 @@ export const Icons = {
   alertTriangle: AlertTriangle,
   construction: Construction,
   shield: Shield,
+  heart: Heart,
+  movie: Film,
+  tvShow: Tv,
+  list: List,
+  smartphone: Smartphone,
+  user: User,
+  code: Code,
+  palette: Palette,
+  database: Database,
+  zap: Zap,
   // logo: (props: IconProps) => (
   //   <svg
   //     xmlns="http://www.w3.org/2000/svg"
