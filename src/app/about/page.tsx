@@ -40,43 +40,43 @@ export default function AboutPage() {
             </h1>
           </div>
           <p className="text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A streaming platform built with love by Shan for his girlfriend Jessy
+            Premium streaming platform for movies, TV shows, and anime
           </p>
           <div className="flex justify-center">
             <Badge variant="secondary" className="text-lg px-4 py-2">
-              💕 Made with Love 💕
+              🚀 Professional Streaming Experience
             </Badge>
           </div>
         </div>
 
-        {/* Love Story Section */}
-        <Card className="border-2 border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 dark:border-pink-800 dark:from-pink-950 dark:to-purple-950">
+        {/* About Section */}
+        <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-purple-50 dark:border-blue-800 dark:from-blue-950 dark:to-purple-950">
           <CardHeader className="text-center">
-            <CardTitle className="text-3xl text-pink-700 dark:text-pink-300">
-              The Story Behind Jstream
+            <CardTitle className="text-3xl text-blue-700 dark:text-blue-300">
+              About Jstream
             </CardTitle>
             <CardDescription className="text-lg">
-              A tale of love, technology, and endless movie nights
+              Professional streaming platform built with modern technology
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6 text-center">
             <div className="max-w-4xl mx-auto space-y-4">
               <p className="text-lg leading-relaxed">
-                <strong>Jstream</strong> was born from a simple yet beautiful idea - to create the perfect streaming platform 
-                for movie nights with the one you love. Shan, a passionate developer, wanted to build something special 
-                for his girlfriend Jessy, who loves watching movies and TV shows together.
+                <strong>Jstream</strong> is a premium streaming platform designed to provide the ultimate movie and TV show 
+                watching experience. Built with cutting-edge web technologies, it offers fast, reliable streaming 
+                with a beautiful, intuitive interface.
               </p>
               <p className="text-lg leading-relaxed">
-                What started as a personal project to make their movie nights more enjoyable has grown into a 
-                comprehensive streaming platform that brings people together through the magic of cinema. 
-                Every feature, every design choice, and every line of code was crafted with Jessy in mind.
+                Our platform brings together the best of modern streaming technology with a focus on user experience, 
+                performance, and accessibility. Every feature is designed to make your streaming experience seamless 
+                and enjoyable across all devices.
               </p>
               <div className="flex items-center justify-center space-x-4 mt-6">
-                <Icons.heart className="h-8 w-8 text-pink-500" />
-                <span className="text-xl font-semibold text-pink-700 dark:text-pink-300">
-                  Built with love by Shan for Jessy
+                <Icons.zap className="h-8 w-8 text-blue-500" />
+                <span className="text-xl font-semibold text-blue-700 dark:text-blue-300">
+                  Built with modern web technologies
                 </span>
-                <Icons.heart className="h-8 w-8 text-pink-500" />
+                <Icons.zap className="h-8 w-8 text-blue-500" />
               </div>
             </div>
           </CardContent>

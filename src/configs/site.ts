@@ -11,12 +11,13 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: env.NEXT_PUBLIC_SITE_NAME,
   author: env.NEXT_PUBLIC_SITE_NAME,
-  slogan: 'Stream Movies & TV Shows Online with Jstream.',
+  slogan: 'Premium Streaming Platform for Movies & TV Shows.',
   description:
     'Jstream - Your ultimate streaming platform. Watch movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.',
   keywords: [
     'jstream',
     'streaming platform',
+    'premium streaming',
     'watch movies',
     'movies online',
     'watch TV',

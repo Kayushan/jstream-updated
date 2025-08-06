@@ -1,6 +1,6 @@
-# Jstream - Streaming Platform Built with Love 💕
+# Jstream - Premium Streaming Platform
 
-A modern streaming platform built by Shan for his girlfriend Jessy, featuring movies, TV shows, and anime content.
+A modern streaming platform featuring movies, TV shows, and anime content with high-quality streaming experience.
 
 ## 🚀 Quick Deploy
 
@@ -32,7 +32,6 @@ Set up the following environment variables:
 
 - 🎬 **Movies & TV Shows**: Browse and watch the latest content
 - 🍿 **Anime Section**: Dedicated anime streaming
-- 💕 **Built with Love**: Created by Shan for his girlfriend Jessy
 - 🌙 **Dark/Light Mode**: Beautiful theme switching
 - 📱 **Responsive Design**: Works on all devices
 - ⚡ **Fast Performance**: Optimized for speed
@@ -54,11 +53,11 @@ npm run build
 npm start
 ```
 
-## 💝 The Love Story
+## 🚀 About Jstream
 
-This streaming platform was built by Shan as a special gift for his girlfriend Jessy. It's designed to provide the perfect movie-watching experience for their cozy nights together. Every feature, every design choice, and every optimization was made with love and care.
+Jstream is a premium streaming platform designed to provide the ultimate movie and TV show watching experience. Built with modern web technologies, it offers fast, reliable streaming with a beautiful, intuitive interface.
 
 ---
 
-Made with ❤️ by Shan for Jessy
+Built with modern web technologies
 
